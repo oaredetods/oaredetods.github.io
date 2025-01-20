@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Ar é de Todos</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #008080;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            color: #008080;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .intro {
+            background-color: #f8f8f8;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .intro p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features li {
+            margin: 20px 0;
+            background-color: #fff;
+            border-left: 5px solid #008080;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .features li:hover {
+            transform: translateY(-3px);
+            transition: transform 0.3s ease;
+        }
+
+        .features h3 {
+            margin-top: 0;
+        }
+
+        .how-it-works p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .showcases {
+            background-color: #f8f8f8;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .showcases p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background-color: #008080;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: #006060;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        footer p {
+            margin: 5px 0;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>O Ar é de Todos</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="scrollToSection('about'); return false;">About</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="#" onclick="scrollToSection('features'); return false;">Features</a>
+                            <div class="dropdown-content">
+                              <a href="#" onclick="scrollToSection('work'); return false;">Work</a>
+                              <a href="#" onclick="scrollToSection('meet'); return false;">Meet</a>
+                              <a href="#" onclick="scrollToSection('rehearse'); return false;">Rehearse</a>
+                              <a href="#" onclick="scrollToSection('learn'); return false;">Learn and Share</a>
+                              <a href="#" onclick="scrollToSection('exhibit'); return false;">Exhibit</a>
+                              <a href="#" onclick="scrollToSection('watch'); return false;">Watch</a>
+                              <a href="#" onclick="scrollToSection('promote'); return false;">Promote and Exchange Ideas</a>
+                            </div>
+                          </div>
+                    </li>
+                    <li><a href="#" onclick="scrollToSection('how-it-works'); return false;">How it Works</a></li>
+                    <li><a href="#" onclick="scrollToSection('showcases'); return false;">Showcases</a></li>
+                    <li><a href="#" onclick="showContactInfo(); return false;">Contact</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="intro">
+        <div class="container">
+            <h2>AR is for Everyone!</h2>
+            <p>A Community, Creative, and Collective Space</p>
+            <p>The AR is a project conceived by a group of people who believe in the power of community and collaboration. Our goal is to create a space accessible to all, where you can do various things:</p>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2 id="features-title">Features</h2>
+            <ul>
+                <li id="work">
+                    <h3>Work</h3>
+                    <p>The AR offers a calm and inspiring environment to work, with free Wi-Fi, comfortable desks, and chairs.</p>
+                </li>
+                <li id="meet">
+                    <h3>Meet</h3>
+                    <p>Whether for a business meeting, a gathering of friends, or a workshop, the AR has a versatile and well-equipped meeting room.</p>
+                </li>
+                <li id="rehearse">
+                    <h3>Rehearse</h3>
+                    <p>Musicians, artists, and theater groups can use the AR's rehearsal room to practice and prepare their performances.</p>
+                </li>
+                <li id="learn">
+                    <h3>Learn and Share</h3>
+                    <p>The AR offers a space for classes, meetings, workshops, talks, and mentoring on a wide range of topics.</p>
+                </li>
+                <li id="exhibit">
+                    <h3>Exhibit</h3>
+                    <p>Visual artists can exhibit their work in the AR's exhibition room, giving visibility to their art.</p>
+                </li>
+                <li id="watch">
+                    <h3>Watch</h3>
+                    <p>The AR also functions as a cinema, where small screenings and film exhibitions are held.</p>
+                </li>
+                <li id="promote">
+                    <h3>Promote and Exchange Ideas</h3>
+                    <p>The AR is a space to share ideas and projects, promoting collaboration among community members.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="how-it-works">
+        <div class="container">
+            <h2>How it Works</h2>
+            <p>The AR operates by reservation and on a donation and/or exchange system. We believe that accessibility is fundamental to building a strong and vibrant community. Therefore, we want the AR to be a space accessible to everyone, regardless of their financial capacity.</p>
+        </div>
+    </section>
+
+    <section id="showcases" class="showcases">
+        <div class="container">
+            <h2>Showcases</h2>
+            <p>The AR also has 2 showcases available for artistic installations. If you have an installation proposal that contains a visible desire to communicate with the outside world, please contact us!</p>
+            <a href="#" class="contact-btn" onclick="showContactInfo(); return false;">Contact Us</a>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 O Ar é de Todos</p>
+            <p id="footer-contact">Contact: <a href="mailto:info@oardetodos.com">info@oardetodos.com</a></p>
+        </div>
+    </footer>
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        function showContactInfo() {
+            alert("Contact us via email: info@oardetodos.com or call us at +351 912 345 678");
+        }
+    </script>
+</body>
+</html>
